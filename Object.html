@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H3> Learn object</H3>
+    <p id="demo"></p>
+    <script>
+       
+        /*
+let person = new Object();
+person.firstname = "Raj";
+person.lastname = "Chaudhary";
+person.age = 20 ;
+person.address = "kupondole";
+
+let x = person; // change garna laii 
+x.firstname = "Niraj";
+
+document.getElementById('demo').innerHTML =`Hey It's me  ${person.firstname}   ${person.lastname} . My age is ${person.age}`;
+   
+*/
+
+/*
+
+let person = {
+    firstname : "niraj",
+    lastname : "chaudhary"
+}
+
+
+let text = "";
+for(let x in person){
+    text +=person[x]; 
+}
+
+document.getElementById('demo').innerHTML = text ;
+
+*/
+
+
+/*
+let person = {
+    firstname : "niraj",
+    lastname : "chaudhary"
+}
+
+person.address = "Rajbiraj";
+
+
+let x = person.address; // change garna laii 
+x = "Thapa";
+
+document.getElementById('demo').innerHTML = person.firstname +" "+ x;
+*/
+
+/*
+
+let person = {
+    firstname : "niraj",
+    lastname : "chaudhary"
+}
+
+person.address = "Rajbiraj";
+
+
+let x = person.address; // change garna laii 
+x = "Thapa";
+
+delete person.address;
+document.getElementById('demo').innerHTML = person.firstname +" "+ x + "<br>"+person.address;
+
+*/
+
+/*
+
+const myObj = {
+    name: "John",
+    age: 30,
+    cars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"},
+    bus: {
+        car: "Ford",
+        car: "BMW",
+        car: "Fiat"
+    
+    }
+};
+
+  document.getElementById("demo").innerHTML = myObj.cars.car2 +" " +myObj.name + "<br>" + myObj.bus.car;
+
+ */
+
+/*
+
+ let x =  "";
+
+ const myobj = {
+    name: "John",
+    age : 30,
+    cars: [ // array inside arrays
+    { name : "Ford" ,  models :["USA" , "America" , "Uk"]} ,
+    { name : "bmw" ,  models :["USA" , "America" , "Uk"]} ,
+    { name : "Bicycle" ,  models :["USA" , "America" , "Uk"]} 
+    
+    ]
+ }
+
+ 
+
+ for( let i in myobj.cars){ //for (let variable in object) 
+    x += "<h2>" + myobj.cars[i].name + "</h2>";
+    for( let j in myobj.cars[i].models){
+        x +=  myobj.cars[i].models[j] + "<br>";
+    }
+ }
+
+ document.getElementById('demo').innerHTML = x;
+
+*/
+
+
+/*
+ const person = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+  
+  document.getElementById("demo").innerHTML = person.fullName;
+*/
+
+/*
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566
+  };
+  
+  person.fullName = function(){
+   return  (this.firstName + " " + this.lastName).toUpperCase();
+
+};
+  document.getElementById("demo").innerHTML = "My Father name is "+ person.fullName();
+*/
+  
+/*
+let message = "Hello world!";
+let x = message.toUpperCase();
+document.getElementById('demo').innerHTML = x;
+
+*/
+
+/*
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  document.getElementById("demo").innerHTML = person;
+*/
+
+/*
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  let y = person.name.toUpperCase();
+  let text =  "";
+  for (let x in person){
+    text += person[x] + " ";
+  };
+  document.getElementById('demo').innerHTML = text+ "<br>"+y;
+*/
+
+
+/*
+// converts an object to an array.
+const person = {
+    name: "NC",
+    age: 30,
+    city: "New York"
+  };
+
+ // let myarray = Object.values(person); // Same ho 
+  //document.getElementById('demo').innerHTML = myarray; 
+  //document.getElementById('demo').innerHTML = Object.values(person); // Same ho
+
+
+  */
+
+  /*
+
+  // (converted object to a string) with the JavaScript function JSON.stringify()
+  const person = {
+    name: "NC",
+    age: 30,
+    city: "New York"
+  };
+
+ // let myarray = Object.values(person); // Same ho 
+  //document.getElementById('demo').innerHTML = myarray; 
+  document.getElementById('demo').innerHTML = JSON.stringify(person); // Same ho
+
+
+  */
+
+/*
+  var person = {
+    name: "John",
+    day: new Date()
+  };
+  
+  document.getElementById("demo").innerHTML = JSON.stringify(person);
+  */
+
+  /*
+  const person = {
+    name: "John",
+    age: function () {return 30 ;
+    
+    }
+  };
+  
+  let myString = JSON.stringify(person);
+  document.getElementById("demo").innerHTML = myString ;
+
+*/
+
+/*
+  const person = {
+    name: "John",
+    age: function () {return 30;
+    
+    }
+  };
+   
+
+  document.getElementById("demo").innerHTML =  JSON.stringify (person.name  + " " + person.age());
+*/
+
+
+/*
+const person = {
+    name: "John",
+    age: function () {return 30; }
+  };
+  
+//This can be "fixed" if you convert the functions into strings before stringifying.
+person.age =person.age.toString();
+  document.getElementById("demo").innerHTML = JSON.stringify(person);
+
+  */
+
+  /*
+  const arr = ["John", "Peter", "Sally", "Jane"];
+document.getElementById("demo").innerHTML = JSON.stringify(arr);
+
+*/
+
+/*
+const arr = {
+  name  : "Niraj" ,
+  surename : "chaudhary",
+  age : 20,
+  fullname : function(){
+    return `My name is ${this.name.toUpperCase()}  ${this.surename} . My age is ${this.age}.`;
+  }
+};
+
+document.getElementById('demo').innerHTML = arr.fullname();
+*/
+
+/*
+const arr = {
+  name  : "Niraj" ,
+  surename : "chaudhary",
+  age : 20,
+get fullName(){  // get method
+    return `My name is ${this.name.toUpperCase()}  ${this.surename} . My age is ${this.age}.`;
+  }
+};
+arr.name = "Nitesh"; 
+document.getElementById('demo').innerHTML = arr.fullName;
+*/
+
+
+/*
+const arr = {
+  name  : "Niraj" ,
+  surename : "chaudhary",
+  age : 20,
+set fullName(n){ // set 
+   this.name = n.toUpperCase();
+
+}
+};
+
+arr.fullName = "Nitesh"; // change name 
+//document.write(arr);
+document.getElementById('demo').innerHTML = arr.name;
+*/
+
+/*
+
+const obj = {counter : 0};
+
+// Define Setters and Getters
+Object.defineProperty(obj, "reset", {
+  get : function () {this.counter = 0;}
+});
+
+Object.defineProperty(obj, "increment", {
+  get : function () {this.counter++;}
+});
+
+Object.defineProperty(obj, "decrement", {
+  get : function () {this.counter--;}
+});
+
+Object.defineProperty(obj, "add", {
+  set : function (value) {this.counter += value;}
+});
+
+Object.defineProperty(obj, "subtract", {
+  set : function (value) {this.counter -= value;}
+});
+
+// Play with counter:
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+
+document.getElementById("demo").innerHTML = obj.counter;
+
+*/
+
+/*
+function person(firstName, lastName, age,eyecolor ){
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.eyecolor = eyecolor;
+
+};
+
+const person1 = new person ("Niraj " , "Chaudhary" , 20 , "Black or brown")
+
+document.getElementById('demo').innerHTML = `My name is  ${person1.firstName} ${person1.lastName}. `;
+*/
+
+
+/*
+function person(firstName, lastName, age,eyecolor ){
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.eyecolor = eyecolor;
+this.sayHello = function(){
+  return(`My name is ${this.firstName} ${this.lastName} . My age is ${this.age} . My eye color is ${eyecolor}. `)
+};
+}
+
+const person1 = new person ("Niraj " , "Chaudhary" , 20 , "Black or brown")
+const person2 = new person ("Raj " , "Chaudhary" , 20 , "Black or brown")
+
+document.getElementById('demo').innerHTML = person1.sayHello() + "<br>" + person2.sayHello();
+*/
+
+/*
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create 2 Person objects
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+// Add nationality to first object
+myFather.nationality = "English";
+
+// Display nationality 
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.nationality.toUpperCase(); 
+
+*/
+
+
+/*
+function person(first, last, age, eye){
+  this.firstname = first;
+  this.lastname = last;
+  this.age = age ;
+  this.eyecolor = eye;
+}
+
+let elder_son = new person("Nitesh" , "chaudhary" , 25 , "black color" );
+let junior_son =new person("Niraj" , "chaudhary", 20 , "Black or brown color");
+
+///Adding a new method to an existing object
+elder_son.name = function(){
+return `My name is ${this.firstname} ${this.lastname} . My age is ${this.age} . My eye color is ${this.eyecolor}.`
+};
+
+// Another Adding a new method to an existing object
+junior_son.name = function(){
+return `My name is ${this.firstname} ${this.lastname} . My age is ${this.age} . My eye color is ${this.eyecolor}.`
+};
+
+
+document.getElementById('demo').innerHTML =elder_son.name() + "<br>" + "<br>" + junior_son.name() ;
+*/
+
+/*
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+
+}
+
+// You can NOT add a new property to a constructor function
+//Person.nationality = "English";
+
+// Create 2 Person objects
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+
+// Display nationality
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality; 
+*/
+
+
+/*
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";//To add a new property to a constructor, you must add it to the constructor function:
+}
+
+// Create 2 Person objects
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+
+// Display nationality
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality; 
+*/
+
+/*
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.name = function() {
+    return this.firstName + " " + this.lastName
+  };
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+
+// Display full name
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name(); 
+*/
+
+/*
+// Constructor function for Person objects
+function Person(firstName,lastName,age,eyeColor) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.eyeColor = eyeColor;
+  this.changeName = function (name) {
+    this.lastName1 = name;
+  }
+}
+// Create a Person object
+const myMother = new Person("Sally","Rally",48,"green");
+
+// Change last name
+myMother.changeName("Doe");
+
+// Display last name
+document.getElementById("demo").innerHTML =
+"My mother's last name is " + myMother.lastName1;
+
+*/
+
+/*
+  function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  
+  Person.prototype.nationality = "English";//The JavaScript prototype property allows you to add new properties to object constructors:
+  
+  const myFather = new Person("John", "Doe", 50, "blue");
+  
+  document.getElementById("demo").innerHTML =
+  "The nationality of my father is " + myFather.nationality;
+
+*/
+
+
+/*
+  function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  
+  Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+  };
+  
+  const myFather = new Person("John", "Doe", 50, "blue");
+  
+  document.getElementById("demo").innerHTML =
+  "My father is " + myFather.name(); 
+  */
+
+  /*
+  // Create a String
+//const name = "W3Schools";
+const name = [1,3,4,567,88]
+
+// List all Elements
+let text = "";
+for (const x of name) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+*/
+
+/*
+function myNumber(){
+  let n =0 ;
+return {
+  next : function(){
+    n = n + 10 ;
+    return { value:n , done : false};
+  }
+};
+}
+
+
+const n = myNumber();
+n.next();
+n.next();
+n.next();
+document.getElementById('demo').innerHTML = n.next().value;
+
+*/
+
+/*
+
+function fruitsIterator(values) {
+  let nextitem = 0;
+  return {
+    next: function() {
+      if (nextitem < values.length) {
+        return {
+          value: values[nextitem++],
+          done: false
+        };
+      } else {
+        return {
+          done: true
+        };
+      }
+    }
+  };
+}
+
+const myArray = ['apple', 'orange', 'mango', 'Grapes'];
+const fruits = fruitsIterator(myArray);
+
+// Extract and display values from the iterator
+document.getElementById('demo').innerHTML = fruits.next().value;
+document.getElementById('demo').innerHTML += "<br>" + fruits.next().value;
+document.getElementById('demo').innerHTML += "<br>" + fruits.next().value;
+document.getElementById('demo').innerHTML += "<br>" + fruits.next().value;
+document.getElementById('demo').innerHTML += "<br>" + fruits.next().value;
+
+
+*/
+
+/*
+const item = ['apple', 'orange', 'mango', 'Grapes' ]; // array
+let text1 = '';
+for(let x of item){
+  text1 += x + "<br>"
+}
+document.getElementById('demo').innerHTML = text1;
+*/
+
+
+/*
+let number = [100,344,567,4532]
+
+let iter = number[Symbol.iterator]();
+//console.log( iter.next().done);
+//console.log( iter.next());
+//console.log( iter.next());
+
+document.write(iter.next());
+document.write(iter.next());
+document.write(iter.next());
+*/
+
+
+/*
+function numberIteractor(arr){
+  var nextitem  = 0 ; //0 bata start gareko
+return{
+  next(){
+    if(nextitem < arr.length){
+      return{
+        value : arr[nextitem++],
+        done: false
+      }
+    }else{
+return{
+  done : true
+}
+    }
+    }
+  }
+}
+
+
+let number = [100,200,300];
+let num = numberIteractor(number);
+
+document.getElementById('demo').innerHTML = num.next().value;
+document.getElementById('demo').innerHTML += "<br>" + num.next().value;
+document.getElementById('demo').innerHTML += "<br>" + num.next().value;
+document.getElementById('demo').innerHTML += "<br>" + num.next().value;
+document.getElementById('demo').innerHTML += "<br>" + num.next().value;
+
+
+*/
+
+/*
+let x = new Set ("Hello" , "World", "Hey" , "rose")
+document.getElementById('demo').innerHTML = x.size;
+*/
+
+/*
+let x = new Set();
+
+x.add("Hello");
+x.add("It's");
+x.add("me");
+x.add("Niraj")
+
+document.write(x.size);
+*/
+
+/*
+let x = new Set();
+
+let a ="a";
+let b = "b";
+let c = "c";
+
+x.add(a)
+x.add(b)
+x.add(c)
+
+document.write(x.size);
+*/
+
+/*
+let x = new Set("Hello" , "World" ," It's" , "me")
+
+x.add("niraj");
+x.add("chaudhary");
+x.add("Chaudhary");// if the add value is same they do count 
+x.add("Chaudhary");
+document.write(x.size);
+*/
+
+/*
+
+const myfavprog = ["java" , "php" , "C++"]
+
+for(i =0; i <myfavprog.length; i++){
+console.log(myfavprog[i])
+}
+myfavprog.forEach(function(value){
+  document.write(value);
+})
+*/
+
+/*
+
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// List all Elements
+let text = "";
+letters.forEach (function(value) {
+  text += value + "<br>";
+})
+
+document.getElementById("demo").innerHTML = text;
+*/
+
+/*
+const letters = new Set(["a","b","c"]);
+
+document.getElementById("demo").innerHTML = letters.values();
+*/
+
+/*
+const letters = new Set(["a","b","c"]);
+
+let text =  ""; 
+for(let x of letters){
+  text += x + "<br>";
+
+}
+
+document.write(text);
+*/
+
+/*
+
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Display set.size
+document.getElementById("demo").innerHTML = letters.keys();
+*/
+
+/*
+const letters = new Set ([1 ,  "Shyam" , "Sita" , "Gita"]) ;
+
+let text = "";
+const iterat = letters.entries(); // doble new set
+for(const entry of iterat){
+  text += entry + "<br>"
+}
+
+document.write(text);
+*/
+
+/*
+let arr = [1,2,3,4,5]
+
+let arr1 = arr.map(function(val){
+        return val*2 ;
+});
+document.write(arr1);
+*/
+
+/*
+var arr = [
+{
+  fname : "Niraj" ,
+  lname : "chaudhary" ,
+  age : 20
+},
+{
+  fname : "Raj" ,
+  lname : "chaudhary" ,
+  age : 20
+},
+{
+  fname : "Niru" ,
+  lname : "chaudhary" ,
+  age : 20
+}
+];
+let arr1 = arr.map(function(val){
+  return val.fname + " " + val.lname; 
+});
+document.write(arr1);
+
+*/
+
+/*
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+*/
+
+/*
+// Create a Map
+const fruits = new Map();
+
+//ou can add elements to a Map with the set() method:
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+
+*/
+
+/*
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+fruits.set("apples", 200);  // existing values
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+*/
+
+/*
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("demo").innerHTML = fruits.size; // The size property returns the number of elements in a Map 
+
+
+*/
+
+/*
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+// Delete an Element
+fruits.delete("apples");
+
+document.getElementById("demo").innerHTML = fruits.size;
+*/
+
+/*
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+fruits.clear(); // clear the map
+
+document.getElementById("demo").innerHTML = fruits.size;
+*/
+
+/*
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+fruits.delete("apples");
+
+
+document.getElementById("demo").innerHTML = fruits.has("apple");
+
+*/
+
+/*
+
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let text = "";
+fruits.forEach (function(value, key) {
+  text += key +"= " + value + "<br>" ;
+})
+
+document.getElementById("demo").innerHTML = text;
+////////////////
+
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let text = "";
+for (const x of fruits.entries()) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+//////////////////////////////////
+
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let text = "";
+for (const x of fruits.values()) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+//////////////////////////////
+
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let text = "";
+for (const x of fruits.keys()) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+
+////////////////////////////////
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let total = 0;
+for (const x of fruits.values()) {
+  total += x;
+}
+
+document.getElementById("demo").innerHTML = total;
+*/
+
+// Create Objects
+const apples = {name: 'Apples'};
+const bananas = {name: 'Bananas'};
+const oranges = {name: 'Oranges'};
+
+const fruits = new Map();
+
+// Add the Objects to the Map
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);
+
+document.getElementById("demo").innerHTML = fruits.ge(apples);
+</script>
+</body>
+</html>

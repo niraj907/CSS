@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Callback function</h1>
+    <p id="demo"></p>
+
+   
+    <!-- <button onclick="myfunction()"> Yes </button>
+    -->
+    <script>
+        /*
+function sayhello(){  // function 1 has been used 
+
+document.write("Hello word");
+}
+function sayhii(){ / function 2 has been used 
+
+document.write("Hii word");
+}
+
+       function sum(num1, num2 , Callback){
+        document.write(num1+num2)
+        Callback();
+       }
+
+    sum(10,20, sayhello);
+    sum(50,20, sayhii);
+      */
+
+                                  //////////////////////////////
+
+      /*
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+      }
+      
+      function myFirst() {
+        myDisplayer("Hello");
+      }
+      
+      function mySecond() {
+        myDisplayer("Goodbye");
+      }
+      mySecond();
+      myFirst();
+*/
+
+/*
+function add(a,b){
+    sum = (a + b);
+    return sum;
+}
+result = add(15, 10);  // in line variable banera used bhako xa
+totalsum(result); // call back function used bhako xa 
+
+// caall back function
+function totalsum(some){
+
+    document.getElementById('demo').innerHTML =some;
+}
+*/
+
+/*
+function greet(name , callback)
+{ 
+  document.write('Hi' + ' ' +  name);
+  callback();
+}
+function callme(){
+document.write('I am callback function')
+
+}
+greet(' perter ' , callme)
+
+*/
+
+/*
+function myDisplayer(some){
+  document.getElementById('demo').innerHTML = some;
+
+} 
+
+function mycalculator(num1,num2,mycallback){
+  let sum = num1+num2;
+  mycallback (sum);
+}
+mycalculator(23,4,myDisplayer);
+*/
+
+
+/*
+
+// Create an array of numbers
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+// Define a function to remove negative numbers from an array
+function removeNeg(numbers) {
+  const positiveNumbers = []; // Initialize an empty array to store positive numbers
+  for (const num of numbers) {
+   // if (num >= 0) {
+    if (num < 0) {
+
+      // If the number is non-negative (positive or zero), add it to the positiveNumbers array
+      positiveNumbers.push(num);
+    }
+  }
+  return positiveNumbers; // Return the array containing only positive numbers
+}
+
+// Call the removeNeg function and pass myNumbers as an argument
+const posNumbers = removeNeg(myNumbers);
+
+// Display the resulting positive numbers
+document.getElementById("demo").innerHTML = posNumbers;
+
+*/
+    
+            // Settimeout function used bhako xa 
+
+/*
+function myfunction(){
+ document.getElementById('demo').innerHTML = 'I love you!!';
+
+}
+setTimeout(myfunction,3000);
+*/
+
+/*
+setTimeout(function(){
+  myfunction('Hello world');
+},3000);
+
+function myfunction(some){
+  document.getElementById('demo').innerHTML = some;
+}
+
+*/
+
+/*
+function greet(name,callback){
+  console.log('hello wold ' + name);
+  callback(name);
+}
+function sayname(hey){
+console.log('heyy' + ' ' + hey);
+}
+ setInterval(greet,3000, 'john' , sayname)
+*/
+
+/* 
+//variable use bhako settimeout garda kheri
+function greet(name,callback){
+  console.log('hello wold ' + name);
+  callback(name);
+}
+function sayname(hey){
+console.log('heyy' + ' ' + hey);
+}
+const x =  setInterval(greet,3000, 'john' , sayname)
+console.log('ID : ' + x );
+*/
+
+/*
+function showtime(){
+  let datetime = new Date();
+  let time = datetime.toLocaleDateString();
+console.log (time);
+setTimeout(showtime,1000);
+}
+showtime();
+*/
+
+setInterval(myfunction, 1000);
+
+function  myfunction(){
+  let d = new Date();
+  document.getElementById('demo').innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+}
+
+</script>
+</body>
+</html>

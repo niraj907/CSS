@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript Class </h2>
+<p id="demo"></p>
+
+<script>
+
+    /*
+    class schoolname {
+        constructor(school){
+            this.school = school;
+        }
+    }
+
+    const myschool = new schoolname("Nightingale");
+
+    document.getElementById('demo').innerHTML = myschool.school;
+
+   */
+
+   /*
+    class car{
+        constructor(Band , Year ){
+            this.Band = Band;
+            this.Year = Year;
+
+        }
+    }
+
+    const Band1 = new car("Ford" , 2022);
+    const Band2  = new car("audi" , 2034);
+
+    document.getElementById('demo').innerHTML = `The car collection1 is ${Band1.Band} . An year is ${Band1.Year} <br> The car collection1 is  ${Band2.Band}.  An year is ${Band2.Year} `;
+
+    */
+
+
+/*
+
+    class Car{
+        constructor(name , year){
+            this.name = name;
+            this.year = year;
+
+        }
+    
+        // function
+    age(){
+        const date = new Date(); /// new Date object create represting current timre or date 
+        return date.getFullYear() - this.year;
+    }
+
+    }
+
+    const mycar = new Car("Ford" , 2002);
+
+    document.write(`My car is  ${mycar.age()} years old.`)
+*/
+
+/*
+class myschool {
+    constructor(schoolname , year){
+        this.schoolname = schoolname;
+        this.year = year;
+    }
+    age(x){
+        return x - this.year;
+    }
+}
+
+const date = new Date();
+let year = date.getFullYear();
+
+// new object create
+const y = new myschool ("Nightingale" , 2020);
+
+document.write(y.age(year))
+
+*/
+
+/*
+class Car{
+    constructor(name , year){
+        this.name = name;
+        this.year = year;
+
+    }
+
+    // function
+age(){
+   // date = new Date(); // error 
+   const date = new Date(); /// new Date object create represting current timre or date 
+    return date.getFullYear() - this.year;
+}
+
+}
+
+const mycar = new Car("Ford" , 2002);
+
+document.write(`My car is  ${mycar.age()} years old.`)
+
+*/
+
+/* 
+class myschool {
+    constructor(){
+        let name;
+        console.log("Hello It's me constructor");
+    }
+    hello(){
+        console.log("Hello "+ this.name )
+    }
+}
+
+let a = new myschool();
+
+a.name = "I'm a student";
+a.hello();
+
+*/
+/*
+class myschool {
+    constructor(name){
+         this.name = name;
+        console.log("Hello It's me constructor");
+    }
+    hello(){
+        console.log("Hello "+ this.name )
+    }
+    message(){
+        console.log("Hey "+ this.name )
+    }
+static unique(){
+    console.log("I'm learning coding today do not disturb.")
+}
+}
+
+let a = new myschool( "I'm a student of bachelors");
+
+
+a.hello();
+a.message();
+myschool.unique();
+
+*/
+
+/*
+class employee{
+    constructor(name,age , salary)
+    {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        console.log("constructor : Employee  "  ) 
+    }
+
+    greet(){
+        console.log(`
+        Name : ${this.name} 
+        Age : ${this.age} 
+        Salary : ${this.salary}` )
+    }
+}
+    class manager extends employee{
+        greet(){
+            super.greet();
+            console.log(`HR Head : Manager ${this.name}` )
+        }
+
+    }
+
+
+let x = new manager("Accountant" , 23, 500000);
+
+x.greet();
+
+*/
+
+/*
+
+class employee{
+    constructor(name,age , salary)
+    {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+       
+    }
+
+    greet(){
+       document.write(`<h3>  Employee class </h3>
+        Name : ${this.name} <br>
+        Age : ${this.age} <br>
+        Salary : ${this.salary}` )
+    }
+}
+    class Manager extends employee{
+        greet(){
+            super.greet();  // if your greet function is not working then we used used  super 
+        let ta = 1000;
+        let pa = 200;
+        let totalnew = this.salary + ta + pa;
+
+            document.write(` <h1> Manager class </h1>
+            Name : ${this.name} <br>
+            Age : ${this.age} <br>
+            Salary : ${totalnew}` )
+        }
+
+    }
+
+
+let x = new Manager("Accountant" , 23, 500000);
+
+x.greet();
+
+*/
+
+/*
+class Car{
+    constructor(band){
+        this.band = band ;
+
+    }
+    present(){
+        return `I have been ${this.band}`
+    }
+}
+class Model extends Car{
+    constructor(band,mod){
+        super(band);
+        this.mod = mod;
+    }
+    show(){
+        return `${this.present()} , it is a ${this.mod}` 
+    }
+}
+
+const myCar = new Model("ford", "Mustand");
+document.getElementById('demo').innerHTML = myCar.show();
+*/
+
+/////////////////////////
+
+/*
+class Car{
+constructor(brand){
+this.brand = brand;
+}
+
+get mycar(){
+    return `Their  collection is ${this.brand}`;
+}
+
+set mycar(y){
+    this.brand = y;
+}
+
+}
+
+const x = new Car("ford");
+x.mycar = "volve"; // it uses the setter myCar.carname = "Volvo"; to change the brand of the car from "Ford" to "Volvo".
+
+document.getElementById('demo').innerHTML = ` ${x.mycar}`;
+*/
+
+/////////////////////////
+
+/*
+class car{
+    constructor(band){
+        this.band = band;
+    }
+
+}
+
+const mycar = new car ("Ford");
+//myCar = new Car("Ford") will raise an error.
+document.getElementById("demo").innerHTML = mycar.band;
+*/
+
+/*
+class Car{
+    constructor(name){
+        this.name = name;
+
+    }
+    static hello(){
+        return `Hey It's my ${this.name}`;
+    }
+}
+const myCar = new Car("Ford");
+document.getElementById("demo").innerHTML = Car.hello();
+*/
+
+
+/*
+class Car{
+    constructor(name){
+        this.name = name;
+
+    }
+    static hello(){
+        return "hello world!!" ;
+    }
+}
+const myCar = new Car("Ford");
+//You can call 'hello()' on the Car Class:
+document.getElementById("demo").innerHTML = Car.hello();
+//document.getElementById("demo").innerHTML = myCar.hello();
+// this will raise an error.
+*/
+
+
+
+class car{
+    constructor(name){
+        this.name = name;
+    }
+    static hello(x){
+        return `Hello world! ${x.name}`
+    }
+}
+let obj = new car ("Ford");
+document.getElementById('demo').innerHTML = car.hello(obj)
+</script>
+</body>
+</html>

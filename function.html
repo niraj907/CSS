@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- <input type=" button"  onclick="msg()" value="call function">   
+ <button onclick="msg()" value="call function">Love</button>  -->
+
+<!-- <input type="button" value="click" onclick="getcube(4)">
+<button  onclick="getcube(5)" > Click </button> -->
+
+<p id="demo"></p>
+
+
+
+<!-- <button type="button" onclick="myFunction()">Count!</button> -->
+
+</body>
+<script>
+/*
+    function msg(){
+    alert("Love is Dangerous for health");
+
+}
+*/
+
+/*
+function getcube(number){
+    alert(number*number*number)
+}
+*/
+
+/*
+function getInfo(){
+    return"hello world";
+}
+
+document.write (getInfo());
+*/
+
+/*
+a = 12;
+b = 12;
+c =  (a+b);
+function add(){
+    return c
+}
+document.write("<br>"+"The sum of two number is"+c );
+*/
+
+/*
+function myname(p1,p2){
+    return p1* p2; 
+}
+
+let result = myname(2,3)
+document.getElementById('demo').innerHTML = result;
+*/
+
+/*
+function toCelsius(fahrenheit){
+    return (5/9)*(fahrenheit-32);
+}
+let value=toCelsius;
+document.getElementById('demo').innerHTML="The Convert Fahrenheit to Celsius is "+value;
+*/
+
+
+/*
+function myFunction() {
+  let carName = "Volvo";
+  let text = "Inside: " + typeof carName + " " + carName; 
+  document.getElementById("demo2").innerHTML = text;
+}
+*/
+
+/*
+function add(b){
+    return(b*b)
+}
+let value = add(6)
+document.getElementById("demo").innerHTML = value;
+*/
+
+/*
+function div(b,a){
+return (b,a);
+}
+document.getElementById('demo').innerHTML = div(10,2);
+*/
+
+
+// Arrow function
+/*
+const triangle = (b,h) => {1/2*b*h};
+document.getElementById('demo').innerHTML ="The area of triangle is "+ triangle(10,5);
+*/
+
+/*
+function div(){
+    return "Hello world";
+    }
+    document.getElementById('demo').innerHTML = div();
+*/
+
+/*
+let hello ='';
+hello = () => {
+    return "hello It me ";
+}
+document.getElementById('demo').innerHTML = hello();
+*/
+
+/*
+let hello = "";
+
+hello = (val) => "Hello " + val;
+
+document.getElementById("demo").innerHTML = hello("Universe!");
+*/
+
+/*
+function greet(name){
+    return("Hello " + name );
+}
+
+let name = prompt ("Enter a word:");
+document.getElementById('demo').innerHTML=greet (name);
+*/
+
+      //Arrow functions
+      /*
+ Unicky = (Hey) =>{
+return "Please "+ Hey;
+ } 
+ let  Hey = prompt ("Enter any word:");
+ document.getElementById('demo').innerHTML = Unicky(Hey);
+*/
+
+/*
+function sum(a,b){
+    return(a+b);
+}
+let a = prompt("Enter any number is ");
+let b = prompt("Enter any number is ");
+document.getElementById('demo').innerHTML = "The sum of two number is "+sum(a,b);
+*/
+
+
+/*
+Unicky = (a,b) =>{
+    return (a*b);
+     } 
+     let a = prompt("Enter any number is ");
+     let b = prompt("Enter any number is ");
+
+
+     a = parseFloat(a);
+     b = parseFloat(b);
+
+     document.getElementById('demo').innerHTML ="the sum of two number is: "+ Unicky(a,b);
+*/
+
+ /*
+function myfunc(thearr){
+    thearr[0] = 20;
+
+}
+const arr = [30];
+
+document.write("The value of first is "+ arr[0] +"<br>");
+    myfunc(arr);
+    document.write("The value of second is "+arr[0]); 
+    */
+
+/*
+    function map(f,a){
+        const result =new Array(a.length);
+        for(let i =0; i<a.length;i++){
+            result[i]=f(a[i]);
+        }
+        return result;
+        }
+
+    function square(x) {
+  return x * x;
+}
+
+const numbers = [1, 2, 3, 4];
+const squaredNumbers = map(square, numbers);
+console.log(squaredNumbers); // Output: [1, 4, 9, 16]
+*/
+
+/*
+function myfunc(x,y){
+    if(y === undefined){
+        y =2;
+    }
+    return x *y;
+}
+
+document.getElementById('demo').innerHTML = myfunc(4);
+
+*/
+
+/*
+function myfunc(x,y=3){
+    return (x+y);
+}
+document.getElementById('demo').innerHTML = myfunc(7);
+*/
+
+// rest parameter
+/*
+
+function sum(...args){
+    let total = 0;
+    for(let i of args)
+    total +=i;
+    return total;
+}
+
+let x = sum(1,2,3,4,5,6,7,8,6,5,9);
+document.getElementById('demo').innerHTML = "The total number is "+x; 
+
+*/
+
+// arguments object in JavaScript
+/*
+
+
+
+
+function findMax() {
+    let max = -Infinity;
+    for(let i = 0; i < arguments.length; i++) {
+      if (arguments[i] > max) {
+        max = arguments[i];
+      }
+    }
+    return max;
+  } 
+  document.getElementById("demo").innerHTML = findMax(4, 5, 6);
+
+
+  function add() {
+    if (arguments.length == 0) {
+      console.log("No argument passed");
+    } else {
+      let sum = 0;
+      for (i = 0; i < arguments.length; i++) {
+          sum = sum + arguments[i];
+        }
+        
+        console.log(sum);
+    }
+}
+
+add(2,4,5);
+
+
+function sumAll() {
+    let sum = 0;
+    for(let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+document.getElementById("demo").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+*/
+
+// this keyword
+
+
+
+
+/*
+
+const niraj = {
+    firstname: "Niraj",
+    lastname: "Chaudhary",
+    total: function(a, b) {
+      console.log(this);
+      return a + b;
+    }
+  };
+  
+  let x = niraj.total(2, 4);
+  document.getElementById('demo').innerHTML = x;
+  */
+
+/*
+
+  const myobject = {
+    firstname : "Niraj",
+    lastname : "Chaudhary",
+    fullname: function(){
+        return this.firstname+ " "+ this.lastname;
+    }
+    
+  }
+  document.getElementById('demo').innerHTML = myobject.fullname();
+
+
+  */
+
+/*
+  const person = {
+    fullname : function(){
+        return this.firstname+ " "+ this.lastname;
+    }
+  }
+
+  const person1 = {
+    firstname : "Niraj",
+    lastname : "Chaudhary",
+  }
+
+  const person2 = {
+    firstname : "Nitesh",
+    lastname : "Chaudhary",
+  }
+
+
+  document.getElementById('demo').innerHTML = person.fullname.call(person2);
+*/
+
+/*
+const youtube1 = {
+    name : "NC",
+    college: "HKC",
+    adrress : function(){
+        return (`Heyy It's me${this.name} I study in ${this.college}. I live in kathmandu.`);
+    }
+}
+const youtube2 = {
+    name : "NS",
+    college: "KMC"}
+
+   // document.getElementById('demo').innerHTML = youtube1.adrress()+ "<br>";
+    document.getElementById('demo').innerHTML = youtube1.adrress.call(youtube2);
+
+    */
+
+/*
+    //call function 
+
+const youtube1 = {
+    name : "NC",
+    college: "HKC",
+    adrress : function(Bachelor){
+        return (`Heyy It's me${this.name} I study in ${this.college}. I live in kathmandu.I'm study of ${Bachelor} in Semester.`);
+    }
+}
+const youtube2 = {
+    name : "NS",
+    college: "KMC"}
+
+  // document.getElementById('demo').innerHTML = youtube1.adrress(3+"rd")+ "<br>";
+    document.getElementById('demo').innerHTML = youtube1.adrress.call(youtube2, "Third");
+*/
+
+/*
+// apply
+
+const youtube1 = {
+    name : "NC",
+    college: "HKC",
+    adrress : function(Bachelor){
+        return (`Heyy It's me${this.name} I study in ${this.college}. I live in kathmandu.I'm study of ${Bachelor} in Semester.`);
+    }
+}
+const youtube2 = {
+    name : "14.niraj",
+    college: "KMC"}
+
+  // document.getElementById('demo').innerHTML = youtube1.adrress(3+"rd")+ "<br>";
+    document.getElementById('demo').innerHTML = youtube1.adrress.apply(youtube2,["Third"]); // array form in a apply 
+*/
+
+/*
+
+//bind
+const youtube1 = {
+    name : "NC",
+    college: "HKC",
+    adrress : function(grade){
+        return (`Heyy It's me${this.name} I study in ${this.college}. I live in kathmandu${grade}`);
+    }
+}
+const youtube2 = {
+    name : "14.niraj",
+    college: "KMC"}
+
+//document.getElementById('demo').innerHTML =  youtube1.adrress.bind(youtube1)();
+let  adrress = youtube1.adrress.bind(youtube2);
+document.getElementById('demo').innerHTML =  adrress("bachelor");
+
+*/
+
+
+
+/*
+const youtube1 = {
+    name : "NC",
+    college: "HKC",
+    adrress : function(){
+        return (`Heyy It's me${this.name} I study in ${this.college}. I live in kathmandu.I'm study of in Semester.`);
+    }
+}
+const youtube2 = {
+    name : "NS",
+    college: "KMC"}
+
+  document.getElementById('demo').innerHTML = youtube1.adrress();
+  */
+
+
+  /*
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    display: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  
+  let display = person.display.bind(person);
+  
+  setTimeout(function() {
+    document.getElementById('demo').innerHTML = display(); // Updates the element with ID "demo" after a delay
+  }, 3000);
+  */
+ 
+  /*
+let counter = 0;
+function add(){
+    //let counter = 0;
+    counter +=1
+}
+
+add();
+add();
+add();
+
+document.getElementById('demo').innerHTML = counter;
+*/
+
+
+/*
+function add() {
+    let counter = 0;
+    counter += 2;
+
+    return counter;
+  }
+  // Trying to increment the counter
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+
+  
+  const add = (function(){
+      let counter = 0;
+      return function(){
+          counter +=1;
+          return counter;
+        }
+    })();
+    
+    function myFunction(){
+        document.getElementById('demo').innerHTML = add();
+    }
+    */
+
+    /*
+let b = 4;
+    function add(){
+        let a = 43;
+        document.write(a+ "<br>");
+        document.write(b);
+
+    }
+    add();
+    */
+
+    /*
+    let x = 5
+    function f(y) {
+         y = 10; 
+        console.log(y)  }
+        f();
+        console.log(x)
+*/
+
+/*
+let x = 5
+function f(x) { x = 10; console.log(x)  }
+f(100)
+console.log(x)
+
+function f(x) { console.log(x); x = 10  }
+f(100)
+f()
+*/
+
+/*
+function meaning() {
+    let answer = 42  
+             // Local variable, in scope until the end of the function
+  }                           // End of function, so answer is now out of scope
+  meaning()
+  console.log(answer) 
+
+*/
+
+/*
+  let message = 'Hello'
+function greet() {
+  console.log(message)      // Throws a ReferenceError (we’re in the TDZ)
+  let message = 'Hola'      // Because the declaration is here
+  console.log(message)
+}
+greet()                     // The error will be propagated out of here
+console.log(message)
+
+*/
+
+/*
+let message = 'Hello'
+function greet() {
+  console.log(message)      // Prints undefined, local variable not yet initialized
+  var message = 'Hola'      // New local variable defined here, but scope is whole body
+  console.log(message)      // Prints "Hola" now (as expected)
+}
+greet()
+console.log(message)    
+*/
+/*
+function f() {
+    console.log(x)
+    var x = 1
+    console.log(x)
+  }
+  f();
+  */
+</script>
+</html>

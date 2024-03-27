@@ -1,0 +1,412 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}r
+
+body{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: orange;
+  color:white;
+  padding: 22px;
+  position: fixed;
+  top:0% ;
+  width: 100%;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+}
+
+ul li{
+  list-style: none;
+
+}
+
+ul li a{
+  text-decoration: none;
+  margin-inline: 20px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+ul li a:hover{
+  color: black;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  transition: margin-right 2s;
+}
+.icons{
+  display: flex;
+  align-items: center;
+}
+
+.icons i{
+  font-size: 1.3rem;
+  color: black;
+  margin-inline: 20px;
+}
+
+.logo{
+  font-size: 1.3rem;
+  color: black;
+}
+
+#bar{
+  display: none;
+}
+
+.main{
+  background-image: url("https://images.pexels.com/photos/3201921/pexels-photo-3201921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainText{
+  position: relative;
+  text-align: center;
+  top: 42%;
+  color: rgb(128, 211, 237);
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+.mainText button{
+  width: 140px;
+  height: 40px;
+  border: 2px solid orange ;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 50px;
+  color: white;
+}
+.mainText button:hover{
+  background-color: orange;
+ font-weight: bolder;
+}
+
+.head{
+  text-align: center;
+  padding:85px ;
+}
+
+.head span{
+  color: orange;
+}
+
+.booking{
+  display: flex ;
+  flex-wrap: wrap;
+justify-content: center;
+}
+
+.booking img{
+  width: 550px;
+  border-radius: 5px;
+}
+
+.form{
+  margin-inline: 28px;
+  width:350px;
+  background-color: #fff;
+  padding: 22px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  box-shadow: 1px 4px 4px 4px rgb(223, 216, 216);
+}
+
+.form input{
+  width: 90%;
+  padding: 8px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.form p{
+margin-top: 12px;
+}
+
+.form button{
+  margin-top: 15px;
+  width: 30%;
+font-size: 1.2rem;
+padding: 5px;
+border-radius: 5px;
+}
+
+.packages{
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+
+  
+}
+
+.packages .card{
+  width:300px ;
+  height: 360px;
+  border-radius: 5px;
+  margin-inline: 20px;
+  box-shadow: 0px 4px 4px 6px rgb(223, 216, 216);
+/* margin-left: 38%; */
+}
+
+.card img{
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.card h3{
+margin-left: 11px;
+margin-top: 11px;
+padding-left: 5px;
+}
+.card p{
+margin-left: 11px;
+margin-top: 11px;
+padding-left: 5px;
+}
+
+.places{
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  margin: auto;
+}
+
+.placeCard{
+  padding: 10px;
+  margin: 15px;
+}
+.places .placeCard{
+box-shadow: 0px 4px 4px 6px rgb(226,225,225);
+border-radius: 5px;
+margin-inline: 22px;
+height: 360px;
+
+}
+
+.placeCard img{
+  width: 100%;
+height: 250px;
+
+}
+.placeCard h3{
+font-size: 1.3rem;
+font-weight: bolder;
+}
+.placeCard h3,p{
+  padding-left: 10px;
+  margin-top: 10px;
+margin-left: 10px;
+
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.contact img{
+  width: 500px;
+}
+
+.contactForm{
+  width: 350px;
+  height:430px ;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 6px silver;
+  padding: 10px;
+}
+
+.contactForm input{
+  width: 90%;
+  padding: 6px;
+  font-size: 1rem;
+  margin-top:3px ;
+}
+
+.contactForm p{
+  margin-top: 13px;
+  font-size: 1.1rem;
+}
+
+.contactForm button{
+  width: 80px;
+  height: 30px;
+  background-color: orange;
+  color: white;
+  font-size: 1.1rem;
+  margin: 22px;
+  border: none;
+  border-radius: 8px;
+}
+
+.wrapper{
+ display: flex; 
+ align-items: center;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.social-icon{
+  padding: 17px;
+margin: 6px;
+  font-size: 1.3rem;
+  border-radius: 20%;
+  height: 20px;
+  width: 20px;
+  background-color: gainsboro;
+}
+
+.facebook:hover{
+  background-color: blue;
+  color: rgb(255, 255, 255);
+}
+.twitter:hover{
+  background-color:#00acee;
+  color: #ececec;
+}
+.instagram:hover {
+  background: linear-gradient(to right, rgba(254, 218, 117), rgba(250, 126, 30), rgba(214, 41, 118), rgba(150, 47, 191), rgba(79, 91, 213));
+  color: #fff;
+}
+
+.github:hover{
+  background-color: #fafafa;
+  color: rgb(13, 13, 13);
+}
+.youtube:hover{
+  background-color: #fc0000;
+  color: rgb(246, 246, 246);
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 66px;
+  margin-top: 55px;
+  background-color: black;
+  color: white;
+}
+
+.text p{
+  margin-top: 11px;
+}
+
+.loginPage{
+  display: none;
+}
+
+.active1{
+  display: block;
+  width: 300px;
+  background-color: #fff;
+  position: fixed;
+  right: 2%;
+  top: 12%;
+  padding:10px ;
+}
+
+.active1 input{
+  width: 90%;
+  padding: 6px;
+  margin-top: 13px;
+}
+
+.active1 button{
+  width: 80px;
+  height: 30px;
+  background-color: orange;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width:900px){
+  ul{
+    display: none;
+  }
+  #bar{
+    display: block;
+ 
+  }
+  .carding{
+margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width:800px){
+.mainText h1{
+  font-size: 22px;
+}
+.booking img{
+  width: 90%;
+}
+.form{
+  width: 80%;
+margin-left: 10px;
+}
+.form input{
+  width: 90%;
+
+}
+.card{
+  margin: 20px;
+  }
+  .text h3, p{
+    margin-top: 8px;
+  }
+}
+@media only screen and (max-width:500px){
+.mainText h1{
+  font-size: 20px;
+}
+.card{
+margin: 20px;
+}
+.contact img{
+  width: 90%;
+}
+.contactForm{
+  width: 80%;
+}
+.social-icon{
+  padding: 12px;
+  margin-left: 8px;
+    font-size: 1rem;
+    border-radius: 18%;
+    height: 18px;
+    width: 18px;
+}
+
+}
+
+@media only screen and (max-width:300px){
+  .social-icon{
+    padding: 12px;
+    margin: 4px;
+      font-size: 1rem;
+      border-radius: 10%;
+      height: 10px;
+      width: 10px;
+  }
+}

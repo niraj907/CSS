@@ -1,0 +1,318 @@
+
+.navbar-nav{
+    margin-right:10%;
+   font-size: 1.3rem;
+}
+
+#size{
+font-size: 2rem;
+}
+
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 580px;
+  
+}
+
+.page1{
+ height: 300px;
+ padding-top: 4%;
+background: #e9ecef;
+}
+
+.page2{
+    height: 600px;
+    padding-top: 5%;
+  /* border: 2px solid black; */
+}
+.page2 p{
+    color: #919191;
+    font-size: 14px;
+}
+
+.myclass{
+    height: 600px;
+    padding-top: 7%;
+/* border-right: black; */
+}
+
+.content-line{
+    padding: 40px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: -1px;
+
+}
+
+.line{
+    padding: 40px;
+    margin: -1px;
+    border-bottom: 1px solid #eee; 
+}
+
+
+  
+/* .clients{
+height: 500px;
+}
+.swiper{
+    width:100%;
+    height: 80%;
+}
+
+.swiper-wrapper{
+    
+    display: flex;
+}
+
+.counter{
+    color: black;
+    
+
+} */
+/* 
+.diamond{
+width: 120px;
+height: 120px;
+background: #e3dbd9;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+transform: rotate(-45deg);
+/* transform-origin: 0 100%; */
+
+
+.diamond {  
+    color: #fff;  
+    font-family: 'Poppins', sans-serif;  
+    text-align: center;  
+    width: 210px;  
+    min-height: 246px;  
+    padding: 25px 0 0;  
+    margin: 0 auto;  
+    position: relative;  
+    z-index: 1;  
+}  
+.diamond:after {  
+    content: '';  
+    background: linear-gradient(to right, #eff0f2, #fefefe);  
+    height: 152px;  
+    width: 152px;  
+    border-radius: 15px;  
+    border: 3px solid #fff;  
+    box-shadow: 5px 0 8px rgba(0, 0, 0, 0.2);  
+    transform: translateX(-50%) rotate(45deg);  
+    position: absolute;  
+    top: 25px;  
+    left: 50%;  
+    z-index: -1;  
+}  
+
+.design{
+   
+    background: linear-gradient(to right,#383634,#e3dbd9);  
+    font-size: 30px;  
+    line-height: 60px;  
+    width: 60px;  
+    height: 60px;  
+    margin: 0 auto 20px;  
+    border-radius: 50%;  
+    border: 2px solid #fff;  
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);  
+margin-top:10%;
+padding-top: 5%;
+}
+
+
+.count-text{
+    margin-top: 38%;
+    border: 5px solid rgba(231, 223, 223, 0.81);
+   
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #383634;
+}
+.count-number{
+position: relative;
+bottom: 135px;
+font-size: 1.8rem;
+font-weight: bolder;
+color: #383634;
+}
+
+
+/* Team */
+
+
+
+
+.flex-page{
+    display: flex;
+    }
+    .flip-container{
+     
+      width: 100px;
+      height:450px;
+      background-color:transparent;
+      border-radius: 10px;
+      perspective: 1200px;
+    }
+    
+    /* Flip Inner Container */
+    .flip-inner-container{
+      position: relative;
+      width: 100%;
+      height: 95%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      
+    
+    }
+    /* add hover to Flip horizonally */
+    .flip-container:hover .flip-inner-container{
+      transform: rotateY(180deg);
+    }
+    
+    /* position front and back */
+    
+    .flip-front,
+    .flip-back{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      /* background-color: green; */
+      border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    /* flip  front from Start Here */
+    .flip-front{
+      background: #A9DBE0;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #A9DBE0, #A9DBE0);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right,#A9DBE0, #A9DBE0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    color: #ffffff;
+    padding: 20px;
+    }
+    
+    .flip-front .profile-image1{
+      background-image: url("https://cdn.pixabay.com/photo/2016/11/29/09/29/woman-1868717__480.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 150px;
+      height: 150px;  
+      border-radius:50%;
+      margin: auto;
+      margin-top: 20px;
+    }
+    
+    .flip-front h3{
+      margin-top: 10px;
+      font-size: 80px;
+      font-family: 'Italianno', cursive;
+      color: #000000;
+    }
+    
+    .flip-front h6{
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #000000;
+      font-family: 'Lilita One', cursive;
+      
+    }
+    /* flip back from Start Here */
+    .flip-back{
+        background: #A9DBE0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #A9DBE0, #A9DBE0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right,#A9DBE0, #A9DBE0);
+    
+      transform: rotateY(180deg);
+    padding: 20px;
+    }
+    
+    .flip-back form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flip-back form input[type="text"], .back form textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      border: none;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      width: 90%;
+      background: linear-gradient(to right, #434343, #000000); 
+      color:#ffffff;
+    }
+    .flip-back form input[type="submit"] {
+      background: linear-gradient(to left, #434343, #000000); 
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      width: 100px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    textarea {
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 10px;
+      border:none; 
+      border-radius: 20px; 
+      width: 90%;
+      color: white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      background: linear-gradient(to right, #434343, #000000); 
+    }
+    .flip-back form input[type="submit"]:hover {
+      background: linear-gradient(to right, #434343, #000000); 
+    }
+    .flip-back .social-icons {
+      margin-top: -4px;
+      display: flex;
+      justify-content: center;
+    }
+    .flip-back .social-icons a {
+    
+      margin-right: 10px;
+    
+      color: #fff;
+      font-size: 10px;
+      padding:10px;
+      width: 30px;
+      height:30px;
+      font-size: 30px;
+    
+    }
+    
+    .credit a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+    }
+    
+    .credit {
+        color: #fff;
+      text-align: center;
+      margin-top: 10px;
+      font-family: Verdana,Geneva,Tahoma,sans-serif;
+    }
+    
+    @media only screen and (max-width: 900px) {
+       .btn{
+        display: none;
+        /* color: #000; */
+      }
+    }

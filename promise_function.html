@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="demo"></p>
+  <body>
+    <script>
+      // let prom = new Promise();
+      /*
+  a = 63;
+   let prom = new Promise(function(resolve,reject){
+  if(a > 10)
+resolve("ok")
+else{
+    reject('error');
+}
+   });
+
+   let onfulfillment = (result) => {
+    console.log("onfulfilles", result)
+   }
+   let onRejection = (Error) => {
+    console.log(`onrejection ${Error}`)
+   }
+   prom.then(onfulfillment).catch(onRejection)
+
+/*
+
+   /*
+   let a = prompt("Enter the number is "); 
+
+   setTimeout(function(){
+      
+   let  prom =   new Promise(function(resolve,reject){
+               if(a > 10)
+             resolve("OK")
+             else{
+                 reject('error');
+             }
+                });
+             
+                let onfulfillment = (result) => {
+               document.write("This is a onfulfilles", result)
+                }
+                let onRejection = (Error) => {
+                    document.write(`There has been onrejection ${Error}`)
+                }
+             
+                prom.then (onfulfillment) 
+             
+                prom.catch(onRejection)
+            
+},1000)
+
+*/
+
+      /*
+
+let prom = new Promise(function(resolve , reject){
+    {
+        let x = 5;
+        if (  x == 0){
+            resolve(" OK ")
+        }else{
+            reject("Error");
+        }
+    }
+});
+
+let onfulfillment = (result) => {
+    document.write("This is a onfulfilles", result)
+     }
+     let onRejection = (Error) => {
+         document.write(`There has been onrejection ${Error}`)
+     }
+  
+     prom.then (onfulfillment) 
+  
+     prom.catch(onRejection)
+*/
+
+      /*
+setTimeout(function(){
+const Promise1 = new Promise(function(resolve, reject){
+    resolve('foo')
+});
+
+Promise1.then((value) => {
+    console.log(value);
+}).catch((error) => { 
+    console.error(error);  // Handle promise rejection
+});
+}, 1000);
+
+*/
+      /*
+
+function prom(hr) {
+
+    return new  Promise(function(resolve , reject){
+        
+     setTimeout(function(){
+          // let  c = a +  b
+         if (hr < 18 ){
+             resolve(" Good day!!  ")
+         }else{
+             reject("It is bad day!! ");
+         }
+     },1000)
+    });
+}
+let onfulfillment = (result) =>{
+    console.log(result);
+}
+
+let onRejection = (Error) =>{
+    console.log(Error)
+}
+prom(100).then(onfulfillment).catch(onRejection);
+
+*/
+
+
+function myDisplayer(some) {
+    document.getElementById("demo").innerHTML = some;
+  }
+  
+  function getFile(myCallback) {
+    let req = new XMLHttpRequest();
+    req.onload = function() {
+      if (req.status == 200) {
+        myCallback(this.responseText);
+      } else {
+        myCallback("Error: " + req.status);
+      }
+    }
+    req.open('GET', "mycar.html");
+    req.send();
+  }
+  
+  getFile(myDisplayer); 
+    
+    </script>
+  </body>
+</html>

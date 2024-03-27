@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="weightGainPlan" class="plan">
+        <h2>Weight Gain Diet Plan</h2>
+        <p>For weight gain, it's important to consume more calories than you burn. Focus on nutrient-dense foods and a balanced diet.</p>
+        <h3>Breakfast</h3>
+        <ul id="breakfastList">
+            <li><span class="meal">Scrambled eggs with spinach and whole-grain toast</span> <button class="details">Details</button></li>
+            <li><span class="meal">Greek yogurt with honey and mixed berries</span> <button class="details">Details</button></li>
+        </ul>
+        <!-- Include similar lists for other meals -->
+    
+        <div id="mealDetails">
+            <!-- Meal details will be displayed here -->
+        </div>
+    </div>
+    
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const breakfastList = document.getElementById("breakfastList");
+            const mealDetails = document.getElementById("mealDetails");
+        
+            // Sample meal details
+            const mealDetailsData = {
+                "Scrambled eggs with spinach and whole-grain toast": "This meal provides protein, healthy fats, and fiber.",
+                "Greek yogurt with honey and mixed berries": "Greek yogurt is rich in protein and probiotics, while berries provide vitamins and antioxidants.",
+                // Include details for other meals here
+            };
+        
+            // Function to display meal details
+            function displayMealDetails(mealName) {
+                const details = mealDetailsData[mealName];
+                mealDetails.innerHTML = `<p><strong>${mealName}</strong></p><p>${details}</p>`;
+                mealDetails.style.display = "block";
+            }
+        
+            // Event delegation to handle button clicks
+            breakfastList.addEventListener("click", function (e) {
+                if (e.target.classList.contains("details")) {
+                    const mealName = e.target.parentElement.querySelector(".meal").textContent;
+                    displayMealDetails(mealName);
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
